@@ -46,15 +46,6 @@ export default function SignIn() {
     if (response.ok) {
       setIsSuccess(true);
       setMessage(data.message || "Login successful");
-
-      // ✅ Set token in cookies
-      Cookies.set('token', data.token, { expires: 2 }); // expires in 2 days
-
-      // Optional: You can also store role/email/orgId if needed
-      Cookies.set('role', data.role);
-      Cookies.set('email', user.email);
-      Cookies.set('orgCode', user.companyCode);
-
       if (data.role === 'admin') {
         router.push('/admin_dashboard');
       } else {
