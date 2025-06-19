@@ -34,6 +34,7 @@ export default function SignIn() {
   try {
     const response = await fetch(process.env.NEXT_PUBLIC_SIGNIN_ADMIN_EMPLOYEE, {
       method: 'POST',
+      credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
       },

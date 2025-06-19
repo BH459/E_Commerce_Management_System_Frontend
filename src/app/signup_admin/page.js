@@ -26,6 +26,7 @@ export default function SignUp() {
       // Make API call to your backend
       const response = await fetch(process.env.NEXT_PUBLIC_SIGNUP_ADMIN, {  // Adjust URL based on your API endpoint
         method: 'POST',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
         },
