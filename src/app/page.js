@@ -67,7 +67,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-600 mr-2">✓</span>
-                  Track all employee sales activities <span className="ml-2 px-3 py-1 rounded-full border-2 border-gray-300 bg-gradient-to-r from-white to-gray-100 text-gray-800 text-sm font-semibold shadow-sm hover:shadow-md transition">Coming Soon</span>
+                  Track all employee sales activities
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-600 mr-2">✓</span>
