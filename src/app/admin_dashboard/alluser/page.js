@@ -58,18 +58,17 @@ export default function AllUsersPage() {
             {users.map((user) => (
               <div 
               key={user.email}  
-              className="py-4 flex justify-between items-start hover:bg-gray-50 px-2 rounded-lg"
+              className="py-4 flex justify-between items-start hover:bg-gray-50 px-2 rounded-lg cursor-pointer"
+              onClick={() =>
+                router.push(`/sells/salessummary?email=${encodeURIComponent(user.email)}`)
+              }
               >
-                <div
-                  onClick={() =>
-                    router.push(`/sells/salessummary?email=${encodeURIComponent(user.email)}`)
-                  }
-                >
+                <div>
                   <h3 className="text-lg font-semibold text-gray-900">{user.name || 'Unnamed User'}</h3>
                   <div className="flex items-center text-sm text-gray-600 mt-1">
                     <Mail className="w-4 h-4 mr-1" />
                     <span
-                      className="text-blue-600 hover:underline cursor-pointer"
+                      className="text-blue-600 hover:underline"
                     >
                         {user.email || 'No email'}
                       </span>
