@@ -56,7 +56,7 @@ const SalesSummary = () => {
     } finally {
       setLoading(false);
     }
-  }, [selectedDate, router]); // ✅ Dependencies for useCallback
+  }, [selectedDate, email, router]); // ✅ Dependencies for useCallback
 
   useEffect(() => {
     if (selectedDate) {
