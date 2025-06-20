@@ -245,6 +245,13 @@ const ProductDashboard = () => {
                 <span className="hidden md:inline">Pending Approval</span>
                 <span className="md:hidden">Pending</span>
               </Link>
+              <Link
+                href="/admin_dashboard/alluser"
+                className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 lg:px-6 lg:py-3 rounded-lg flex items-center space-x-2 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm lg:text-base"
+              >
+                <span className="hidden md:inline">Emp Sells History</span>
+                <span className="md:hidden">Emp Sells</span>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
@@ -275,6 +282,13 @@ const ProductDashboard = () => {
                 onClick={() => setShowMobileMenu(false)}
               >
                 <span>Pending Approval</span>
+              </Link>
+              <Link
+                href="/admin_dashboard/alluser"
+                className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg flex items-center justify-center space-x-2 transition-all duration-300"
+                onClick={() => setShowMobileMenu(false)}
+              >
+                <span>Emp Sells History</span>
               </Link>
             </div>
           )}
