@@ -2,8 +2,11 @@
 import React, { useCallback,useState, useEffect } from 'react';
 import { Calendar, TrendingUp, DollarSign, ShoppingBag, RefreshCw } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { useSearchParams } from "next/navigation";
 
 const SalesSummary = () => {
+  const searchParams = useSearchParams();
+  const email = searchParams.get("email");
   const [summaryData, setSummaryData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -25,6 +28,7 @@ const SalesSummary = () => {
     try {
       const queryParams = new URLSearchParams();
       queryParams.append('date', selectedDate);
+      if (email) queryParams.append("email", email);
 
       const response = await fetch(`${process.env.NEXT_PUBLIC_EMPLOYEE_SALESSUMMARY}?${queryParams}`, {
         method: 'GET',
