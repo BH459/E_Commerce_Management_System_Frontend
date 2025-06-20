@@ -56,7 +56,7 @@ const ProductDashboard = () => {
     } finally {
       setLoading(false);
     }
-  }, [router]);
+  }, [API_BASE, router]);
 
   // Add new product
   const addProduct = async () => {
